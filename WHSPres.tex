@@ -1,0 +1,80 @@
+
+\documentclass[12pt]{article}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{wasysym}
+\usepackage{latexsym}
+
+\usepackage[multiple]{footmisc}
+
+\usepackage{enumitem}
+
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+% FIXED FOOTNOTES [multiple] option conflict with Hyperref!!!!!!
+\let\oldFootnote\footnote
+\newcommand\nextToken\relax
+
+\renewcommand\footnote[1]{%
+    \oldFootnote{#1}\futurelet\nextToken\isFootnote}
+
+\newcommand\isFootnote{%
+    \ifx\footnote\nextToken\textsuperscript{,}\fi}
+
+\usepackage[margin=1in,includefoot]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{\thepage\ }
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+\usepackage{subcaption}
+
+\setlist[enumerate,1]{start=0}
+
+\begin{document}
+\sffamily
+\begin{titlepage}
+\begin{center}
+
+\Huge{W.H.S Mathematics Presentation}\\
+\LARGE{Think about Mathematics and Physics naturally}\\
+[45mm]
+
+\LARGE{By: Michael Gonzalez\\
+[5mm]
+Prof. Ramirez's SP 2018 3rd pd. Physics}\\
+[5mm]
+
+April $\text{4}^{\text{th}}$, 2018 \\
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+\cleardoublepage
+
+\section*{Notation, Formulas, and Equations}\label{sec:Formulas}
+\addcontentsline{toc}{section}{\numberline{}Notation, Formulas and Equations}
+
+
+
+\cleardoublepage
+
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Introduction}\label{sec:Intro}
+
+\cleardoublepage
+
+\end{document}
