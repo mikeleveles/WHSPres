@@ -65,7 +65,27 @@ April $\text{4}^{\text{th}}$, 2018 \\
 \section*{Notation, Formulas, and Equations}\label{sec:Formulas}
 \addcontentsline{toc}{section}{\numberline{}Notation, Formulas and Equations}
 
-Notation should be pretty standard complex analysis notation\footnote{Actual notation used comes from this book: Joseph Bak Donald J. Newman 'Complex Analysis', 3rd ed.}.
+Notation should be pretty standard complex analysis notation\footnote{Actual notation used comes from this book: Joseph Bak, Donald J.
+Newman, 'Complex Analysis', 3rd ed.}. The space of complex numbers is denoted $\mathbb{C}$, by convention, the variable used to denote a 
+function of a complex variable the letter $z$ is used.
+
+\[ z := x + iy, \; \forall z\in \mathbb{C}; \quad \Re{z} = x; \quad \Im{z} = y; \quad \lVert z\rVert = \sqrt{x^2 + y^2};\]
+
+Polar representation of complex numbers requires information about the angle a complex number $z$ makes with the positive $\mathbb{R}$
+-axis, for this discussion. The angle $\theta$ a complex number $z$ makes is called the argument of the number $z$:
+
+\[ \Arg{z} = \theta = \arccos{\frac{\Re{z}}{\lVert z \rVert}} = \arcsin{\frac{\Im{z}}{\lVert z \rVert}} = \arctan{\frac{\Im{z}}{\Re{z}}} + \gamma; \]
+
+where $\gamma$:
+
+\[ \gamma \iff \pi,\;\{x<0,\;y>0\}, \quad \text{or} \quad \{x<0, \; y<0\};\]
+\[ \gamma \iff 2\pi,\;\{x>0,\;y<0\};\] 
+
+The complete polar representation of a complex number $z$ below:
+
+\[ r = \lVert z \rVert; \quad \cis{\theta} = \cos{\theta} + i\sin{\theta}; \quad z = r\cis{\theta};\]
+
+These tools are used in the presentation for the proof outlined.
 
 \cleardoublepage
 
