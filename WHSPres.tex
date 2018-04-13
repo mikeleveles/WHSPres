@@ -114,10 +114,40 @@ the structure of the complex numbers are out of scope for now, I want to introdu
 There are two conventional ways of representing the complex numbers in mathematics: cartesian, and polar representation. The cartesian representation is straightforward:
 
 \begin{tikzpicture}
-	\begin{axis}
-	\addplot[color=red]{exp(x)};
+
+	\begin{axis}[axis lines = left,
+	 xlabel = {$x(\Re{z})$},
+	 ylabel = {$iy(\Im{z})$},
+	 xmin=0, xmax=5,
+	 ymin=0, ymax=5,
+	 xtick={0,...,4},
+	 ytick={0,...,4}]
+		\addplot[color=black] coordinates{(0,0)(1.5,1)}; % adds black line, no markers
+		\addplot[color=black, mark=*] coordinates{(1.5,1)}; % adds black marker to specified point for emphasis, this is a Complex number
+		\addplot[color=black] coordinates{(0,0)(2,3)};
+		\addplot[color=black, mark=*] coordinates{(2,3)};
+	\end{axis}
+
+\end{tikzpicture}% Removes whitespace between axes!!!
+\hskip 5pt
+\begin{tikzpicture}
+	\begin{axis}[axis lines = left,
+	 xlabel = {$x(\Re{z})$},
+	 ylabel = {$iy(\Im{z})$},
+	 xmin=0, xmax=5,
+	 ymin=0, ymax=5,
+	 xtick={0,...,4},
+	 ytick={0,...,4}]
+	 	\addplot[color=black,quiver={u=\thisrow{u},v=\thisrow{v}}, -stealth,] table{
+	 		x y u v
+	 		0 0 0 0
+	 		0 0 1.5 1
+	 		0 0 0 0
+	 		0 0 2 3
+	 	};
 	\end{axis}
 \end{tikzpicture}
+
 
 The polar representation uses angles and lengths to represent the same complex numbers.
 
