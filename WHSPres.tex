@@ -11,6 +11,9 @@
 \usepackage{wasysym}
 \usepackage{latexsym}
 
+\usepackage{tikz}
+\usepackage{pgfplots}
+
 \usepackage[multiple]{footmisc}
 
 \usepackage{enumitem}
@@ -97,11 +100,34 @@ These tools are used in the presentation for the proof outlined.
 \setcounter{page}{1}
 \section{Introduction}\label{sec:Intro}
 
-Physics uses mathematical descriptions to model events in the physical world. Consequentially, a firm foundation in mathematics is useful to the modern physicist. Today I am here to explain another way to think about mathematics to facilitate learning how to solve much more difficult problems.
+Physics uses mathematical descriptions to model events in the physical world. Consequentially, a firm foundation in mathematics is useful to the modern physicist. Today I am here to explain another way to think about mathematics to facilitate learning more difficult problems.
 
 \section{Roots of Complex Numbers}
 
+The complex plane imposes interesting results due to the structure of the numbers in the space. Notably, the entire complex plane is
+isomorphic\footnote{Not sure if correct term to use here.} to the space $\mathbb{R}^2$, the cartesian plane, the complex numbers cannot 
+have an 'traditional' binary order operation, and complex numbers lend themselves to vector equations/operations. All the implications of 
+the structure of the complex numbers are out of scope for now, I want to introduce an interesting problem to solve from the complex plane.
 
+There are two conventional ways of representing the complex numbers in mathematics: cartesian, and polar representation. The cartesian rep
+resentation is straightforward:
+
+% \begin{tikzpicture}[domain=0:2]
+
+% 	\draw[ultrathin,color=gray,step=.25cm](-0.5,-.5) grid (3,3);
+% 	\draw[->] (-1,0) -- (3.5,0)
+% 	node[below right] {$x$};
+% 	\draw[->] (0,-1) -- (0,3.5)
+% 	node[left] {$y$}
+% 	\draw plot[id=x] function{x*x};
+
+% \end{tikzpicture}
+
+The polar representation uses angles and lengths to represent the same complex numbers.
+
+[GRAPHIC]
+
+The type of problem I want to solve is best solved via the polar representation of complex numbers.
 
 \cleardoublepage
 
