@@ -14,7 +14,9 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 
-\pgfplotsset{width=7cm,compat=1.9}
+\pgfplotsset{width=6.5cm,compat=1.13}
+
+\usepgfplotslibrary{polar}%adds polar axes library and environment to TeX for easier polar representations of Data
 
 \usepackage[multiple]{footmisc}
 
@@ -129,7 +131,7 @@ There are two conventional ways of representing the complex numbers in mathemati
 	\end{axis}
 
 \end{tikzpicture}% Removes whitespace between axes!!!
-\hskip 5pt
+\hskip 10pt
 \begin{tikzpicture}
 	\begin{axis}[axis lines = left,
 	 xlabel = {$x(\Re{z})$},
@@ -148,10 +150,24 @@ There are two conventional ways of representing the complex numbers in mathemati
 	\end{axis}
 \end{tikzpicture}
 
-
 The polar representation uses angles and lengths to represent the same complex numbers.
 
-[GRAPHIC]
+\begin{tikzpicture}
+
+	\begin{polaraxis}[xmin=0, xmax=90,
+	ymin=0, ymax=5,
+	axis line style = {->},
+	y label style={at={(axis description cs:0.5,-0.05)},anchor=north},
+	x label style={at={(axis description cs:0.9192388153,0.9192388153)},rotate=45,anchor=south},
+	ylabel={$r$},
+	xlabel={$\theta$}]
+		\addplot[data cs=cart, color=black] coordinates{(0,0)(1.5,1)};
+		\addplot[data cs=cart, color=black, mark=*] coordinates{(1.5,1)};
+		\addplot[data cs=cart, color=black] coordinates{(0,0)(2,3)};
+		\addplot[data cs=cart, color=black, mark=*] coordinates{(2,3)};
+	\end{polaraxis}
+
+\end{tikzpicture}
 
 The type of problem I want to solve is best solved via the polar representation of complex numbers.
 
