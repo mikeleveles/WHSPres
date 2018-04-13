@@ -14,6 +14,8 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 
+\pgfplotsset{width=7cm,compat=1.9}
+
 \usepackage[multiple]{footmisc}
 
 \usepackage{enumitem}
@@ -109,19 +111,13 @@ isomorphic\footnote{Not sure if correct term to use here.} to the space $\mathbb
 have an 'traditional' binary order operation, and complex numbers lend themselves to vector equations/operations. All the implications of 
 the structure of the complex numbers are out of scope for now, I want to introduce an interesting problem to solve from the complex plane.
 
-There are two conventional ways of representing the complex numbers in mathematics: cartesian, and polar representation. The cartesian rep
-resentation is straightforward:
+There are two conventional ways of representing the complex numbers in mathematics: cartesian, and polar representation. The cartesian representation is straightforward:
 
-% \begin{tikzpicture}[domain=0:2]
-
-% 	\draw[ultrathin,color=gray,step=.25cm](-0.5,-.5) grid (3,3);
-% 	\draw[->] (-1,0) -- (3.5,0)
-% 	node[below right] {$x$};
-% 	\draw[->] (0,-1) -- (0,3.5)
-% 	node[left] {$y$}
-% 	\draw plot[id=x] function{x*x};
-
-% \end{tikzpicture}
+\begin{tikzpicture}
+	\begin{axis}
+	\addplot[color=red]{exp(x)};
+	\end{axis}
+\end{tikzpicture}
 
 The polar representation uses angles and lengths to represent the same complex numbers.
 
