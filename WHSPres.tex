@@ -18,6 +18,13 @@
 
 \usepgfplotslibrary{polar}%adds polar axes library and environment to TeX for easier polar representations of Data
 
+% 2D VECTORS COMMAND USING PGF AND TIKZ GRAPHICS, WORKS IN PGFPLOTS ENVIRONMENTS
+
+\newcommand{\vecTwo}[3]%May fix errors
+{
+	\draw[->,#3] (#1) -- (#2);
+}
+
 \usepackage[multiple]{footmisc}
 
 \usepackage{enumitem}
@@ -131,8 +138,9 @@ There are two conventional ways of representing the complex numbers in mathemati
 	\end{axis}
 
 \end{tikzpicture}% Removes whitespace between axes!!!
-\hskip 10pt
+\hskip 10pt% adds space between adjacent axes graphics
 \begin{tikzpicture}
+
 	\begin{axis}[axis lines = left,
 	 xlabel = {$x(\Re{z})$},
 	 ylabel = {$iy(\Im{z})$},
@@ -148,6 +156,7 @@ There are two conventional ways of representing the complex numbers in mathemati
 	 		0 0 2 3
 	 	};
 	\end{axis}
+
 \end{tikzpicture}
 
 The polar representation uses angles and lengths to represent the same complex numbers.
@@ -166,6 +175,23 @@ The polar representation uses angles and lengths to represent the same complex n
 		\addplot[data cs=cart, color=black, mark=*] coordinates{(1.5,1)};
 		\addplot[data cs=cart, color=black] coordinates{(0,0)(2,3)};
 		\addplot[data cs=cart, color=black, mark=*] coordinates{(2,3)};
+	\end{polaraxis}
+
+\end{tikzpicture}% Removes whitespace between adjacent math graphics!!!
+\hskip 10pt
+\begin{tikzpicture}
+	
+	\begin{polaraxis}[xmin=0, xmax=90,
+	ymin=0, ymax=5,
+	axis line style={->},
+	y label style={at={(axis description cs:0.5,-0.05)},anchor=north},
+	x label style={at={(axis description cs:0.9192388153,0.9192388153)},rotate=45,anchor=south},
+	ylabel={$r$},
+	xlabel={$\theta$},
+	ytick={0,...,4},
+	data cs=cart]
+	 	\vecTwo{0,0}{1.5,1}{black}
+	 	\vecTwo{0,0}{2,3}{black}
 	\end{polaraxis}
 
 \end{tikzpicture}
