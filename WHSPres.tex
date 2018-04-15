@@ -160,7 +160,8 @@ The polar representation uses angles and lengths to represent the same complex n
 	y label style={at={(axis description cs:0.5,-0.05)},anchor=north},
 	x label style={at={(axis description cs:0.9192388153,0.9192388153)},rotate=45,anchor=south},
 	ylabel={$r$},
-	xlabel={$\theta$}]
+	xlabel={$\theta$},
+	ytick={0,...,4}]
 		\addplot[data cs=cart, color=black] coordinates{(0,0)(1.5,1)};
 		\addplot[data cs=cart, color=black, mark=*] coordinates{(1.5,1)};
 		\addplot[data cs=cart, color=black] coordinates{(0,0)(2,3)};
